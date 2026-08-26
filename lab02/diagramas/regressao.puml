@@ -1,0 +1,21 @@
+@startuml regressao
+
+actor Cliente
+
+participant Carrinho
+participant Pedido
+participant "Calculadora de Frete" as Frete
+participant Pagamento
+
+Cliente -> Carrinho : adicionaItem()
+Cliente -> Pedido : finalizaPedido()
+
+Pedido -> Frete : calcularFrete()
+Frete --> Pedido : valorFrete
+
+Pedido -> Pagamento : processarPagamento()
+Pagamento --> Pedido : pagamentoAprovado
+
+Pedido --> Cliente : compraConfirmada
+
+@enduml
