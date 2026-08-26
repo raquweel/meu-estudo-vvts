@@ -8,6 +8,7 @@ component "Calculadora de Frete" as Frete
 component "Pagamento" as Pagamento
 component "Estoque" as Estoque
 component "Entrega" as Entrega
+component "Teste" as Teste
 
 Cliente --> Carrinho : adiciona item
 Cliente --> Pedido : finaliza compra
@@ -17,5 +18,12 @@ Pedido --> Frete : calcula frete
 Pedido --> Pagamento : processa pagamento
 Pedido --> Estoque : atualiza estoque
 Pedido --> Entrega : solicita entrega
+
+Teste ..> Carrinho : integra
+Teste ..> Pedido : integra
+Teste ..> Frete : integra
+Teste ..> Pagamento : integra
+Teste ..> Estoque : integra
+Teste ..> Entrega : integra
 
 @enduml
