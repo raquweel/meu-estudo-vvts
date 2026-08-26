@@ -1,0 +1,21 @@
+@startuml big-bang
+
+actor Cliente
+
+component "Carrinho" as Carrinho
+component "Pedido" as Pedido
+component "Calculadora de Frete" as Frete
+component "Pagamento" as Pagamento
+component "Estoque" as Estoque
+component "Entrega" as Entrega
+
+Cliente --> Carrinho : adiciona item
+Cliente --> Pedido : finaliza compra
+
+Carrinho --> Pedido : envia itens e total
+Pedido --> Frete : calcula frete
+Pedido --> Pagamento : processa pagamento
+Pedido --> Estoque : atualiza estoque
+Pedido --> Entrega : solicita entrega
+
+@enduml
