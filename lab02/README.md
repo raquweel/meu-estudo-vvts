@@ -21,7 +21,7 @@ Caso: *Finalizar um pedido*
 ### 2.2. [Integração Incremental Top-Down (Descendente) com uso de Stubs](./diagramas/top-down.puml) 
 Caso: *Finalizar um pedido*
 
-- ***Comportamento prático da abordagem***: Demonstra a integração gradual dos módulos relacionados ao Pedido, começando pelo módulo principal e avançando para os módulos inferiores. Enquanto Pagamento, Estoque e Entrega ainda não estão disponíveis, são utilizados Stubs (*Stub = pedaço de código simples que simula um módulo inferior ou dependente que ainda não foi desenvolvido*) para simular seu comportamento.
+- ***Comportamento prático da abordagem***: Demonstra a integração gradual dos módulos relacionados ao Pedido, começando pelo módulo principal e avançando para os módulos inferiores. Enquanto Pagamento, Estoque e Entrega ainda não estão disponíveis, são utilizados Stubs para simular seu comportamento. (*Stub = pedaço de código simples que simula um módulo inferior ou dependente que ainda não foi desenvolvido*)
   
 - ***Mecanismo técnico***: Foco na integração hierárquica dos módulos. Uso de diagrama de hierarquia de módulos. Módulos: Pedido; Calculadora de Frete; Pagamento Stub; Estoque Stub; Entrega Stub. Conforme os módulos reais ficam disponíveis, os Stubs são substituídos por Pagamento, Estoque e Entrega.
   
@@ -30,7 +30,7 @@ Caso: *Finalizar um pedido*
 ### 2.3. [Integração Incremental Bottom-Up (Ascendente) com uso de Drivers](./diagramas/bottom-up.puml) 
 Caso: *Finalizar um pedido*
 
-- ***Comportamento prático da abordagem***: Demonstra a integração gradual dos módulos do sistema começando pelos componentes de nível inferior, como Calculadora de Frete, Pagamento, Estoque e Entrega. Os módulos são testados individualmente por meio de Drivers (*Driver = pedaço de código que simula um módulo superior ou chamador quando o módulo principal ainda não está pronto, mas as partes inferiores já estão desenvolvidas*) e, posteriormente, integrados ao módulo superior Pedido.
+- ***Comportamento prático da abordagem***: Demonstra a integração gradual dos módulos do sistema começando pelos componentes de nível inferior, como Calculadora de Frete, Pagamento, Estoque e Entrega. Os módulos são testados individualmente por meio de Drivers e, posteriormente, integrados ao módulo superior Pedido. (*Driver = pedaço de código que simula um módulo superior ou chamador quando o módulo principal ainda não está pronto, mas as partes inferiores já estão desenvolvidas*)
 
 - ***Mecanismo técnico***: Foco na integração dos módulos de baixo para cima. Uso de diagrama de componentes. Componentes: Pedido; Calculadora de Frete; Pagamento; Estoque; Entrega; e seus respectivos Drivers, que acionam os módulos inferiores durante os testes.
 
@@ -56,6 +56,13 @@ Caso: *Finalizar uma compra após alteração no cálculo do frete*
     
 ## 3. Teste de Validação (Validation Testing)
 ### 3.1. [Critérios de Aceitação (User Acceptance Testing)](./diagramas/aceitacao.puml) 
+Caso: *Aplicar cupom de desconto*
+
+- ***Comportamento prático da abordagem***: Demonstra a validação da funcionalidade de aplicação de cupom conforme os critérios definidos pelo negócio. O Cliente informa o código do cupom e o Sistema verifica se ele atende aos critérios de validade. Se for válido, o desconto é calculado e o valor do carrinho é atualizado. Caso contrário, uma mensagem de erro é apresentada.
+  
+- ***Mecanismo técnico***: Foco na validação dos critérios necessários para aceitar a funcionalidade. Uso de diagrama de atividades com raias de responsabilidade, representando as ações do Cliente e do Sistema. O fluxo envolve a funcionalidade aplicarCupom(codigo), incluindo validação do cupom, cálculo do desconto e atualização do valor do carrinho.
+
+- ***Benefícios***: Permite verificar se a funcionalidade atende às regras e expectativas definidas pelo negócio antes de ser considerada concluída, identificando situações em que o comportamento implementado não corresponde aos critérios de aceitação.
 
 ### 3.2. [Teste Alfa (Alpha Testing)](./diagramas/alpha.puml)
 ### 3.3. [Teste Beta (Beta Testing)](./diagramas/beta.puml) 
