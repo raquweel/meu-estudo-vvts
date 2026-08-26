@@ -72,7 +72,15 @@ Caso: *Cadastrar um produto no marketplace*
 - ***Mecanismo técnico***: Foco na validação da funcionalidade antes de sua disponibilização aos usuários finais. Uso de diagrama de atividades com raias de responsabilidade, representando as ações do Participante do Teste Alfa e do Sistema. O fluxo envolve o cadastro e a validação dos dados do produto, incluindo nome, descrição, preço e quantidade, além do registro do resultado do teste.
   
 - ***Benefícios***: Permite identificar defeitos, comportamentos inesperados e problemas de usabilidade em um ambiente controlado antes da liberação da funcionalidade para o público, possibilitando correções com base nos resultados e feedbacks obtidos durante o teste.
+  
 ### 3.3. [Teste Beta (Beta Testing)](./diagramas/beta.puml) 
+Caso: *Avaliar um produto comprado*
+
+- ***Comportamento prático da abordagem***: Demonstra a utilização da funcionalidade por um Cliente Beta, que acessa o histórico de pedidos, seleciona um produto comprado e informa uma avaliação. O sistema valida os dados e, caso sejam válidos, publica a avaliação e apresenta a confirmação ao cliente. Caso sejam inválidos, o cliente pode corrigir as informações e tentar novamente.
+  
+- ***Mecanismo técnico***: Foco na utilização da funcionalidade por usuários externos em condições próximas às reais. Uso de diagrama de atividades com raias de responsabilidade, representando as ações do Cliente Beta e do Sistema. A funcionalidade envolve a validação e a publicação da avaliação, composta por nota e comentário.
+
+- ***Benefícios***: Permite identificar problemas que podem não ter sido encontrados nos testes anteriores, principalmente relacionados ao uso real da funcionalidade, além de verificar se o sistema atende às expectativas dos usuários antes da liberação geral.
     
 ## 4. Teste de Sistema (System Testing)
 ### 4.1. [Teste de Recuperação (Recovery Testing)](./diagramas/recovery.puml) 
