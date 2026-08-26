@@ -3,9 +3,8 @@ Cenário: Plataforma de E-commerce e Marketplace de grande porte
 ## 1. Teste de Unidade (Unit Testing)
 ### 1.1. [Teste de unidade](./diagramas/unidade.puml)
 Caso: Calcular o valor do frete
-- Demonstra um teste unitário do componente CalculadoraFrete para validar a lógica de cálculo do frete com base no peso do pedido e na regra de frete grátis.
-Utiliza a classe CalculadoraFreteTest, com os testes calculaFretePorPeso() e freteGratis(), para verificar cada comportamento individualmente. A dependência ConsultaFrete é substituída por ConsultaFreteStub, permitindo testar a lógica sem depender de serviços externos;
-- O teste de unidade permite testar uma pequena parte isolada do sistema.
+- Demonstra um teste unitário do componente CalculadoraFrete para validar a lógica de cálculo do valor do frete. A CalculadoraFrete utiliza as informações do Pedido, como valor total e peso, e do EnderecoEntrega, que contém o CEP de destino. A classe CalculadoraFreteTest verifica individualmente o cálculo do frete por peso e a aplicação da regra de frete grátis.
+- O teste de unidade permite testar essa pequena parte isolada do sistema.
 
 ## 2. Teste de Integração (Integration Testing)
 ### 2.1. [Integração Não Incremental (Big Bang)](./diagramas/big-bang.puml)
