@@ -1,0 +1,37 @@
+@startuml teste-beta
+
+|Cliente Beta|
+start
+
+:Acessa histórico de pedidos;
+:Seleciona produto comprado;
+:Informa avaliação;
+
+note left
+Dados informados:
+- Nota
+- Comentário
+end note
+
+|Sistema|
+:Valida avaliação;
+
+while (Avaliação válida?) is (Não)
+
+    |Cliente Beta|
+    :Visualiza mensagem de erro;
+    :Corrige avaliação;
+
+    |Sistema|
+    :Valida avaliação;
+
+endwhile (Sim)
+
+:Publica avaliação;
+
+|Cliente Beta|
+:Visualiza confirmação;
+
+stop
+
+@enduml
