@@ -46,6 +46,13 @@ Caso: *Realizar login no e-commerce*
 - ***Benefícios***: Permite verificar rapidamente se uma funcionalidade essencial do e-commerce está funcionando após uma nova versão ou alteração no sistema, identificando falhas graves que impediriam a continuidade dos testes.
 
 ### 2.5. [Teste de Regressão](./diagramas/regressao.puml)
+Caso: *Finalizar uma compra após alteração no cálculo do frete*
+
+- ***Comportamento prático da abordagem***: Demonstra a execução novamente do fluxo de compra após uma alteração na CalculadoraFrete. O Cliente adiciona um item ao Carrinho, finaliza o Pedido, que solicita o cálculo do frete e, em seguida, realiza o pagamento. O objetivo é verificar se a alteração no cálculo do frete não afetou o funcionamento das demais etapas da compra.
+  
+- ***Mecanismo técnico***: Foco na reexecução de uma funcionalidade que já funcionava anteriormente. Uso de diagrama de sequência. Participantes: Cliente, Carrinho, Pedido, CalculadoraFrete e Pagamento. O fluxo utiliza os métodos adicionaItem(), finalizaPedido(), calcularFrete() e processarPagamento().
+  
+- ***Benefícios***: Permite identificar defeitos introduzidos por alterações no sistema, verificando se funcionalidades existentes continuam funcionando corretamente. Também ajuda a detectar efeitos colaterais em componentes que não foram diretamente modificados.
     
 ## 3. Teste de Validação (Validation Testing)
 ### 3.1. [Critérios de Aceitação (User Acceptance Testing)](./diagramas/aceitacao.puml) 
