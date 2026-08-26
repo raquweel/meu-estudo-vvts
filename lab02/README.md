@@ -11,7 +11,7 @@ Caso: *Calcular o valor do frete*
 
 ## 2. Teste de Integração (Integration Testing)
 ### 2.1. [Integração Não Incremental (Big Bang)](./diagramas/big-bang.puml)
-Caso: *Finalizar uma compra*
+Caso: *Finalizar um pedido*
 - ***Comportamento prático da abordagem***: Demonstra a integração simultânea dos principais componentes do processo de compra. O Cliente adiciona itens ao Carrinho e finaliza o Pedido, que se comunica com os componentes CalculadoraFrete, Pagamento, Estoque e Entrega. Todos os componentes são integrados antes da realização do teste.
   
 - ***Mecanismo técnico***: Foco na comunicação entre os componentes/partes maiores do sistema. Uso de diagrama de componentes. Componentes: Carrinho; Pedido; CalculadoraFrete; Pagamento; Estoque; Entrega; e Teste, responsável por verificar o funcionamento do conjunto integrado.
@@ -19,6 +19,11 @@ Caso: *Finalizar uma compra*
 - ***Benefícios***: Permite verificar se os principais componentes conseguem funcionar corretamente em conjunto e identificar problemas nas interfaces e na comunicação entre eles. Entretanto, como todos são integrados de uma vez, pode ser mais difícil identificar qual componente causou uma falha.
 
 ### 2.2. [Integração Incremental Top-Down (Descendente) com uso de Stubs](./diagramas/top-down.puml) 
+Caso: *Finalizar um pedido*
+
+***Comportamento prático da abordagem***: Demonstra a integração gradual dos módulos relacionados ao Pedido, começando pelo módulo principal e avançando para os módulos inferiores. Enquanto Pagamento, Estoque e Entrega ainda não estão disponíveis, são utilizados Stubs para simular seu comportamento.
+***Mecanismo técnico***: Foco na integração hierárquica dos módulos. Uso de diagrama de hierarquia de módulos. Módulos: Pedido; Calculadora de Frete; Pagamento Stub; Estoque Stub; Entrega Stub. Conforme os módulos reais ficam disponíveis, os Stubs são substituídos por Pagamento, Estoque e Entrega.
+***Benefícios***: Permite testar os módulos superiores antes que todo o sistema esteja pronto, facilitando a identificação de problemas de integração. Os Stubs permitem controlar as respostas dos módulos ainda não implementados.
 
 ### 2.3. [Integração Incremental Bottom-Up (Ascendente) com uso de Drivers](./diagramas/bottom-up.puml) 
 
