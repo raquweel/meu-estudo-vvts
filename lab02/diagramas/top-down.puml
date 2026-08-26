@@ -1,0 +1,23 @@
+@startuml top-down
+
+rectangle "Pedido" as Pedido
+
+rectangle "Calculadora de Frete" as Frete
+rectangle "Pagamento Stub" as PagamentoStub
+rectangle "Estoque Stub" as EstoqueStub
+rectangle "Entrega Stub" as EntregaStub
+
+rectangle "Pagamento" as Pagamento
+rectangle "Estoque" as Estoque
+rectangle "Entrega" as Entrega
+
+Pedido --> Frete
+Pedido --> PagamentoStub
+Pedido --> EstoqueStub
+Pedido --> EntregaStub
+
+PagamentoStub ..> Pagamento : substitui
+EstoqueStub ..> Estoque : substitui
+EntregaStub ..> Entrega : substitui
+
+@enduml
