@@ -21,13 +21,20 @@ Caso: *Finalizar um pedido*
 ### 2.2. [Integração Incremental Top-Down (Descendente) com uso de Stubs](./diagramas/top-down.puml) 
 Caso: *Finalizar um pedido*
 
-- ***Comportamento prático da abordagem***: Demonstra a integração gradual dos módulos relacionados ao Pedido, começando pelo módulo principal e avançando para os módulos inferiores. Enquanto Pagamento, Estoque e Entrega ainda não estão disponíveis, são utilizados Stubs (pedaço de código simples que substitui um componente real em um sistema) para simular seu comportamento.
+- ***Comportamento prático da abordagem***: Demonstra a integração gradual dos módulos relacionados ao Pedido, começando pelo módulo principal e avançando para os módulos inferiores. Enquanto Pagamento, Estoque e Entrega ainda não estão disponíveis, são utilizados Stubs (*Stub = pedaço de código simples que simula um módulo inferior ou dependente que ainda não foi desenvolvido*) para simular seu comportamento.
   
 - ***Mecanismo técnico***: Foco na integração hierárquica dos módulos. Uso de diagrama de hierarquia de módulos. Módulos: Pedido; Calculadora de Frete; Pagamento Stub; Estoque Stub; Entrega Stub. Conforme os módulos reais ficam disponíveis, os Stubs são substituídos por Pagamento, Estoque e Entrega.
   
 - ***Benefícios***: Permite testar os módulos superiores antes que todo o sistema esteja pronto, facilitando a identificação de problemas de integração. Os Stubs permitem controlar as respostas dos módulos ainda não implementados.
 
 ### 2.3. [Integração Incremental Bottom-Up (Ascendente) com uso de Drivers](./diagramas/bottom-up.puml) 
+Caso: *Finalizar um pedido*
+
+- ***Comportamento prático da abordagem***: Demonstra a integração gradual dos módulos do sistema começando pelos componentes de nível inferior, como Calculadora de Frete, Pagamento, Estoque e Entrega. Os módulos são testados individualmente por meio de Drivers (*Driver = pedaço de código que simula um módulo superior ou chamador quando o módulo principal ainda não está pronto, mas as partes inferiores já estão desenvolvidas*) e, posteriormente, integrados ao módulo superior Pedido.
+
+- ***Mecanismo técnico***: Foco na integração dos módulos de baixo para cima. Uso de diagrama de componentes. Componentes: Pedido; Calculadora de Frete; Pagamento; Estoque; Entrega; e seus respectivos Drivers, que acionam os módulos inferiores durante os testes.
+
+- ***Benefícios***: Permite testar os módulos inferiores antes da implementação ou integração dos módulos superiores. Os Drivers simulam as chamadas que seriam feitas pelo Pedido, facilitando a identificação de erros nos módulos e nas suas interfaces.
 
 ### 2.4. [Teste de Fumaça (Smoke Testing)](./diagramas/smoke.puml) 
 
