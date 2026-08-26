@@ -65,6 +65,13 @@ Caso: *Aplicar cupom de desconto*
 - ***Benefícios***: Permite verificar se a funcionalidade atende às regras e expectativas definidas pelo negócio antes de ser considerada concluída, identificando situações em que o comportamento implementado não corresponde aos critérios de aceitação.
 
 ### 3.2. [Teste Alfa (Alpha Testing)](./diagramas/alpha.puml)
+Caso: *Cadastrar um produto no marketplace*
+
+- ***Comportamento prático da abordagem***: Demonstra a execução da funcionalidade de cadastro de produtos por um Participante do Teste Alfa (representado por Vendedor no diagrama), em um ambiente controlado. O participante acessa a área de cadastro, informa os dados do produto e verifica o comportamento do sistema. Caso existam dados inválidos, visualiza as mensagens de erro, corrige as informações e realiza uma nova tentativa até que o produto seja cadastrado com sucesso.
+  
+- ***Mecanismo técnico***: Foco na validação da funcionalidade antes de sua disponibilização aos usuários finais. Uso de diagrama de atividades com raias de responsabilidade, representando as ações do Participante do Teste Alfa e do Sistema. O fluxo envolve o cadastro e a validação dos dados do produto, incluindo nome, descrição, preço e quantidade, além do registro do resultado do teste.
+  
+- ***Benefícios***: Permite identificar defeitos, comportamentos inesperados e problemas de usabilidade em um ambiente controlado antes da liberação da funcionalidade para o público, possibilitando correções com base nos resultados e feedbacks obtidos durante o teste.
 ### 3.3. [Teste Beta (Beta Testing)](./diagramas/beta.puml) 
     
 ## 4. Teste de Sistema (System Testing)
