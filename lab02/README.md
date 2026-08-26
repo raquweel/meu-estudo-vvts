@@ -37,6 +37,13 @@ Caso: *Finalizar um pedido*
 - ***Benefícios***: Permite testar os módulos inferiores antes da implementação ou integração dos módulos superiores. Os Drivers simulam as chamadas que seriam feitas pelo Pedido, facilitando a identificação de erros nos módulos e nas suas interfaces.
 
 ### 2.4. [Teste de Fumaça (Smoke Testing)](./diagramas/smoke.puml) 
+Caso: *Realizar login no e-commerce*
+
+- ***Comportamento prático da abordagem***: Demonstra uma verificação rápida do fluxo principal de login. O cliente acessa a tela, informa e-mail e senha e envia o formulário. O sistema verifica os dados e, caso sejam válidos, permite o acesso à área do cliente. Caso contrário, apresenta uma mensagem de erro.
+  
+- ***Mecanismo técnico***: Foco no fluxo principal da funcionalidade. Uso de fluxograma, representando as etapas de acesso, preenchimento, validação e resultado do login.
+
+- ***Benefícios***: Permite verificar rapidamente se uma funcionalidade essencial do e-commerce está funcionando após uma nova versão ou alteração no sistema, identificando falhas graves que impediriam a continuidade dos testes.
 
 ### 2.5. [Teste de Regressão](./diagramas/regressao.puml)
     
