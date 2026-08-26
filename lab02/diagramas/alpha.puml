@@ -1,0 +1,39 @@
+@startuml teste-alfa
+
+|Vendedor|
+start
+
+:Acessa área de cadastro de produtos;
+:Informa dados do produto;
+
+note left
+Dados informados:
+- Nome
+- Descrição
+- Preço
+- Quantidade
+end note
+
+|Sistema|
+:Valida dados do produto;
+
+while (Dados válidos?) is (Não)
+    :Identifica campos inválidos;
+
+    |Vendedor|
+    :Visualiza mensagens de erro;
+    :Corrige informações;
+
+    |Sistema|
+    :Valida dados do produto;
+endwhile (Sim)
+
+:Cadastra produto;
+:Disponibiliza produto para venda;
+
+|Vendedor|
+:Visualiza confirmação do cadastro;
+
+stop
+
+@enduml
