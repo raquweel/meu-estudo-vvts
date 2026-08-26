@@ -5,17 +5,12 @@ class Pedido {
     - pesoTotal: double
 }
 
-interface ConsultaFrete {
-    + valorBaseCEP(cep: String): double
-}
-
-class ConsultaFreteStub {
-    + valorBaseCEP(cep: String): double
+class EnderecoEntrega {
+    - cep: String
 }
 
 class CalculadoraFrete {
-    - consultaFrete: ConsultaFrete
-    + calculaFrete(pedido: Pedido, cep: String): double
+    + calculaFrete(pedido: Pedido, endereco: EnderecoEntrega): double
 }
 
 class CalculadoraFreteTest {
@@ -25,8 +20,6 @@ class CalculadoraFreteTest {
 
 CalculadoraFreteTest ..> CalculadoraFrete : testa
 CalculadoraFrete --> Pedido : utiliza
-CalculadoraFrete --> ConsultaFrete : consulta
-ConsultaFreteStub ..|> ConsultaFrete : implementa
+CalculadoraFrete --> EnderecoEntrega : utiliza
 
 @enduml
-
