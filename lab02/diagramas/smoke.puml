@@ -1,0 +1,21 @@
+@startuml smoke-login
+
+start
+
+:Cliente acessa a tela de login;
+
+:Informa e-mail e senha;
+
+:Envia formulário;
+
+if (Dados válidos?) then (Sim)
+    :Autenticar cliente;
+    :Acessar área do cliente;
+    :Login realizado com sucesso;
+else (Não)
+    :Exibir mensagem de erro;
+endif
+
+stop
+
+@enduml
