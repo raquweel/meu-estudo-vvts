@@ -1,0 +1,25 @@
+@startuml bottom-up
+
+component "Pedido" as Pedido
+
+component "Calculadora de Frete" as Frete
+component "Pagamento" as Pagamento
+component "Estoque" as Estoque
+component "Entrega" as Entrega
+
+component "Driver Frete" as DriverFrete
+component "Driver Pagamento" as DriverPagamento
+component "Driver Estoque" as DriverEstoque
+component "Driver Entrega" as DriverEntrega
+
+DriverFrete --> Frete : testa
+DriverPagamento --> Pagamento : testa
+DriverEstoque --> Estoque : testa
+DriverEntrega --> Entrega : testa
+
+Pedido --> Frete : utiliza
+Pedido --> Pagamento : utiliza
+Pedido --> Estoque : utiliza
+Pedido --> Entrega : utiliza
+
+@enduml
