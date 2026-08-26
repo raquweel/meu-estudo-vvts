@@ -1,0 +1,25 @@
+@startuml criterios-aceitacao
+
+|Cliente|
+start
+:Informa código do cupom;
+
+|Sistema|
+:Recebe código;
+:Valida cupom;
+
+if (Cupom atende aos critérios?) then (Sim)
+    :Calcula desconto;
+    :Atualiza valor do carrinho;
+    
+    |Cliente|
+    :Visualiza desconto aplicado;
+else (Não)
+    
+    |Cliente|
+    :Visualiza mensagem de erro;
+endif
+
+stop
+
+@enduml
