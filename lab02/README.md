@@ -14,7 +14,7 @@ Caso: *Calcular o valor do frete*
 Caso: *Finalizar uma compra*
 - ***Comportamento prático da abordagem***: Demonstra a integração simultânea dos principais componentes do processo de compra. O Cliente adiciona itens ao Carrinho e finaliza o Pedido, que se comunica com os componentes CalculadoraFrete, Pagamento, Estoque e Entrega. Todos os componentes são integrados antes da realização do teste.
   
-- ***Mecanismo técnico***: Foco na comunicação entre os componentes. Uso de diagrama de componentes. Componentes: Carrinho; Pedido; CalculadoraFrete; Pagamento; Estoque; Entrega; e Teste, responsável por verificar o funcionamento do conjunto integrado.
+- ***Mecanismo técnico***: Foco na comunicação entre os componentes/partes maiores do sistema. Uso de diagrama de componentes. Componentes: Carrinho; Pedido; CalculadoraFrete; Pagamento; Estoque; Entrega; e Teste, responsável por verificar o funcionamento do conjunto integrado.
 
 - ***Benefícios***: Permite verificar se os principais componentes conseguem funcionar corretamente em conjunto e identificar problemas nas interfaces e na comunicação entre eles. Entretanto, como todos são integrados de uma vez, pode ser mais difícil identificar qual componente causou uma falha.
 
