@@ -41,7 +41,7 @@ Caso: *Realizar login no e-commerce*
 
 - ***Comportamento prático da abordagem***: Demonstra uma verificação rápida do fluxo principal de login. O cliente acessa a tela, informa e-mail e senha e envia o formulário. O sistema verifica os dados e, caso sejam válidos, permite o acesso à área do cliente. Caso contrário, apresenta uma mensagem de erro.
   
-- ***Mecanismo técnico***: Foco no fluxo principal da funcionalidade. Uso de fluxograma, representando as etapas de acesso, preenchimento, validação e resultado do login.
+- ***Mecanismo técnico***: Foco no fluxo principal da funcionalidade. Uso de diagrama de atividades, com raias de responsabilidade para representar as ações do Cliente e do Sistema, incluindo acesso à tela, preenchimento dos dados, validação e resultado do login.
 
 - ***Benefícios***: Permite verificar rapidamente se uma funcionalidade essencial do e-commerce está funcionando após uma nova versão ou alteração no sistema, identificando falhas graves que impediriam a continuidade dos testes.
 
