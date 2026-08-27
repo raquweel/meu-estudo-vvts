@@ -1,0 +1,23 @@
+@startuml performance
+
+|Teste|
+start
+
+:Envia solicitação de pesquisa;
+
+|Sistema|
+:Processa pesquisa;
+:Mede tempo de resposta;
+
+if (Tempo atende ao limite?) then (Sim)
+    :Retorna resultados;
+
+    |Teste|
+    :Registra desempenho adequado;
+else (Não)
+    :Registra tempo acima do limite;
+endif
+
+stop
+
+@enduml
