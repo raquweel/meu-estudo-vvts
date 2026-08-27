@@ -1,19 +1,26 @@
 @startuml smoke-login
 
+|Cliente|
 start
 
-:Cliente acessa a tela de login;
-
+:Acessa a tela de login;
 :Informa e-mail e senha;
-
 :Envia formulário;
 
+|Sistema|
+:Valida dados de acesso;
+
 if (Dados válidos?) then (Sim)
-    :Autenticar cliente;
-    :Acessar área do cliente;
-    :Login realizado com sucesso;
+    :Autentica cliente;
+    :Libera acesso à área do cliente;
+
+    |Cliente|
+    :Acessa área do cliente;
 else (Não)
-    :Exibir mensagem de erro;
+    :Exibe mensagem de erro;
+
+    |Cliente|
+    :Visualiza mensagem de erro;
 endif
 
 stop
