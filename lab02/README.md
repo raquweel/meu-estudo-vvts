@@ -110,3 +110,10 @@ Caso: *Acesso à página de um produto sob carga elevada*
 - ***Benefícios***: Permite identificar problemas de desempenho, estabilidade e capacidade quando o sistema é submetido a uma carga elevada, ajudando a encontrar o limite em que o sistema começa a apresentar degradação.
   
 ### 4.4. [Teste de Desempenho (Performance Testing)](./diagramas/performance.puml)
+Caso: *Pesquisa de produtos*
+
+- ***Comportamento prático da abordagem***: Demonstra a execução de uma pesquisa de produto para medir o tempo de resposta do sistema. O Teste envia uma solicitação, o Sistema processa a pesquisa e mede o tempo necessário para retornar os resultados. Em seguida, verifica-se se o tempo está dentro do limite definido.
+
+- ***Mecanismo técnico***: Foco no tempo de resposta da funcionalidade de pesquisa. Uso de diagrama de atividades, com as raias Teste e Sistema. O fluxo envolve o envio da solicitação, o processamento da pesquisa, a medição do tempo de resposta e a verificação do resultado em relação ao limite estabelecido.
+
+- ***Benefícios***: Permite identificar lentidão e problemas de desempenho, verificando se o sistema responde às solicitações dentro do tempo esperado e proporcionando uma experiência adequada aos usuários.
