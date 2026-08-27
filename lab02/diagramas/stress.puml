@@ -1,0 +1,23 @@
+@startuml stress
+
+|Teste|
+start
+
+:Envia solicitações ao produto;
+:Aumenta progressivamente a carga;
+
+|Sistema|
+:Processa solicitações;
+
+if (Sistema continua respondendo?) then (Sim)
+    :Continua o processamento;
+else (Não)
+    :Registra degradação;
+endif
+
+|Teste|
+:Registra resultado do teste;
+
+stop
+
+@enduml
