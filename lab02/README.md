@@ -84,6 +84,13 @@ Caso: *Avaliar um produto comprado*
     
 ## 4. Teste de Sistema (System Testing)
 ### 4.1. [Teste de Recuperação (Recovery Testing)](./diagramas/recovery.puml) 
+Caso: *Recuperar um pedido após uma falha do sistema*
+
+- ***Comportamento prático da abordagem***: Demonstra o comportamento do sistema após uma falha durante o processamento de um pedido. O sistema é restaurado e tenta recuperar os dados do pedido. Se os dados estiverem íntegros, o processamento é retomado e o pedido é confirmado. Caso contrário, uma mensagem de erro é apresentada.
+  
+- ***Mecanismo técnico***: Foco na recuperação do sistema e na integridade dos dados após uma falha. Uso de diagrama de atividades com raias de responsabilidade, representando as ações do Cliente e do Sistema. O fluxo envolve o processamento, a falha, a restauração do sistema e a recuperação dos dados do pedido.
+  
+- ***Benefícios***: Permite verificar se o sistema consegue retornar ao funcionamento após uma falha sem perder ou corromper dados importantes, identificando problemas de recuperação que poderiam afetar pedidos e usuários.
 ### 4.2. [Teste de Segurança (Security Testing)](./diagramas/security.puml) 
 ### 4.3. [Teste de Estresse (Stress Testing)](./diagramas/stress.puml) 
 ### 4.4. [Teste de Desempenho (Performance Testing)](./diagramas/performance.puml)
