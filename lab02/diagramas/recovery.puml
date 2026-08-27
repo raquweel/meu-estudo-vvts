@@ -1,0 +1,32 @@
+@startuml recovery
+
+|Cliente|
+start
+:Finaliza pedido;
+
+|Sistema|
+:Processa pedido;
+
+:Falha do sistema;
+
+:Restaura sistema;
+
+:Recupera dados do pedido;
+
+if (Dados íntegros?) then (Sim)
+    :Retoma processamento;
+    :Confirma pedido;
+
+    |Cliente|
+    :Visualiza confirmação;
+else (Não)
+    |Sistema|
+    :Registra falha na recuperação;
+
+    |Cliente|
+    :Visualiza mensagem de erro;
+endif
+
+stop
+
+@enduml
