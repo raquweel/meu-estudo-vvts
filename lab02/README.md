@@ -23,7 +23,7 @@ Caso: *Finalizar um pedido*
 
 - ***Comportamento prático da abordagem***: Demonstra a integração gradual dos módulos relacionados ao Pedido, começando pelo módulo principal e avançando para os módulos inferiores. Enquanto Pagamento, Estoque e Entrega ainda não estão disponíveis, são utilizados Stubs para simular seu comportamento. (*Stub = pedaço de código simples que simula um módulo inferior ou dependente que ainda não foi desenvolvido*)
   
-- ***Mecanismo técnico***: Foco na integração hierárquica dos módulos. Uso de diagrama de hierarquia de módulos. Módulos: Pedido; Calculadora de Frete; Pagamento Stub; Estoque Stub; Entrega Stub. Conforme os módulos reais ficam disponíveis, os Stubs são substituídos por Pagamento, Estoque e Entrega.
+- ***Mecanismo técnico***: Foco na integração gradual dos componentes a partir do Pedido. Uso de diagrama de componentes. Componentes: Pedido, Calculadora de Frete, Pagamento Stub, Estoque Stub e Entrega Stub. Conforme os componentes reais ficam disponíveis, os Stubs são substituídos por Pagamento, Estoque e Entrega.
   
 - ***Benefícios***: Permite testar os módulos superiores antes que todo o sistema esteja pronto, facilitando a identificação de problemas de integração. Os Stubs permitem controlar as respostas dos módulos ainda não implementados.
 
