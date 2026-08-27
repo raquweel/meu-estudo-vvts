@@ -1,0 +1,33 @@
+@startuml security
+
+|Cliente|
+start
+
+:Acessa um pedido;
+
+|Sistema|
+:Verifica autenticação;
+
+if (Está autenticado?) then (Sim)
+    :Verifica dono do pedido;
+
+    if (Pedido pertence ao cliente?) then (Sim)
+        :Permiti acesso;
+
+        |Cliente|
+        :Visualiza pedido;
+    else (Não)
+        :Bloqueia acesso;
+        :Exibe acesso negado;
+    endif
+
+else (Não)
+    :Bloqueia acesso;
+
+    |Cliente|
+    :Solicita login;
+endif
+
+stop
+
+@enduml
