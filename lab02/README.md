@@ -101,4 +101,12 @@ Caso: *Verificar acesso ao pedido do cliente*
 - ***Benefícios***: Permite identificar falhas de controle de acesso, como um cliente autenticado conseguir visualizar o pedido de outro cliente, protegendo informações privadas dos usuários.
 
 ### 4.3. [Teste de Estresse (Stress Testing)](./diagramas/stress.puml) 
+Caso: *Acesso à página de um produto sob carga elevada*
+
+- ***Comportamento prático da abordagem***: Demonstra o aumento progressivo de solicitações de acesso à página de um produto para verificar como o sistema se comporta sob uma carga elevada. O sistema processa as solicitações e verifica-se se continua respondendo ou se apresenta degradação.
+  
+- ***Mecanismo técnico***: Foco no comportamento e na estabilidade do sistema sob carga elevada. Uso de diagrama de atividades, com as raias Teste e Sistema. O Teste envia solicitações e aumenta a carga, enquanto o Sistema processa as solicitações. Ao final, o resultado do teste é registrado, incluindo a ocorrência ou não de degradação.
+  
+- ***Benefícios***: Permite identificar problemas de desempenho, estabilidade e capacidade quando o sistema é submetido a uma carga elevada, ajudando a encontrar o limite em que o sistema começa a apresentar degradação.
+  
 ### 4.4. [Teste de Desempenho (Performance Testing)](./diagramas/performance.puml)
