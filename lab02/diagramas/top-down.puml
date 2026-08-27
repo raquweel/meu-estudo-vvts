@@ -1,15 +1,15 @@
 @startuml top-down
 
-rectangle "Pedido" as Pedido
+component "Pedido" as Pedido
 
-rectangle "Calculadora de Frete" as Frete
-rectangle "Pagamento Stub" as PagamentoStub
-rectangle "Estoque Stub" as EstoqueStub
-rectangle "Entrega Stub" as EntregaStub
+component "Calculadora de Frete" as Frete
+component "Pagamento Stub" as PagamentoStub
+component "Estoque Stub" as EstoqueStub
+component "Entrega Stub" as EntregaStub
 
-rectangle "Pagamento" as Pagamento
-rectangle "Estoque" as Estoque
-rectangle "Entrega" as Entrega
+component "Pagamento" as Pagamento
+component "Estoque" as Estoque
+component "Entrega" as Entrega
 
 Pedido --> Frete
 Pedido --> PagamentoStub
