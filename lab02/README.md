@@ -92,5 +92,13 @@ Caso: *Recuperar um pedido após uma falha do sistema*
   
 - ***Benefícios***: Permite verificar se o sistema consegue retornar ao funcionamento após uma falha sem perder ou corromper dados importantes, identificando problemas de recuperação que poderiam afetar pedidos e usuários.
 ### 4.2. [Teste de Segurança (Security Testing)](./diagramas/security.puml) 
+Caso: *Verificar acesso ao pedido do cliente*
+
+- ***Comportamento prático da abordagem***: Demonstra a verificação de segurança ao acessar um pedido. O sistema verifica se o cliente está autenticado e, em seguida, se o pedido pertence a ele. O acesso é permitido somente quando as duas condições são atendidas.
+
+- ***Mecanismo técnico***: Foco na autenticação e na autorização do acesso aos pedidos. Uso de diagrama de atividades com raias de responsabilidade, representando as ações do Cliente e do Sistema. O sistema realiza as verificações de autenticação e de propriedade do pedido antes de permitir sua visualização.
+
+- ***Benefícios***: Permite identificar falhas de controle de acesso, como um cliente autenticado conseguir visualizar o pedido de outro cliente, protegendo informações privadas dos usuários.
+
 ### 4.3. [Teste de Estresse (Stress Testing)](./diagramas/stress.puml) 
 ### 4.4. [Teste de Desempenho (Performance Testing)](./diagramas/performance.puml)
